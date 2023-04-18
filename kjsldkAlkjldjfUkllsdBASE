@@ -1,0 +1,18 @@
+setclipboard("https://discord.gg/3thBJx2axb")
+request = http_request or request or HttpPost or syn.request
+    request({
+    Url = "http://127.0.0.1:6463/rpc?v=1",
+    Method = "POST",
+    Headers = {
+      ["Content-Type"] = "application/json",
+      ["Origin"] = "https://discord.com"
+    },
+    Body = game:GetService("HttpService"):JSONEncode({
+      cmd = "INVITE_BROWSER",
+      args = {
+          code = "3thBJx2axb"
+      },
+      nonce = game:GetService("HttpService"):GenerateGUID(false)
+  }),
+})
+game.Players.LocalPlayer:Kick("AutoFarm got disabled in 2022! Use AutoStrat! Invite to my discord server copied to clipboard! Go to #strats channel on my discord! ~Money Maker")
